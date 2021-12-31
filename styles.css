@@ -110,7 +110,7 @@ color variables defined
 /* Mobile First ***************************************************/
 
 main {
-  max-width: 48rem;
+  max-width: 23.4rem;
   margin: 0 auto;
 }
 
@@ -119,11 +119,25 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+.members {
+  max-width: 11.09rem;
+}
+
 img.portrait {
-  width: 80%;
+  width: 78%;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-family: "Poppins", serif;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  width: 78%;
+  margin: 10px auto;
+  background-color: aqua;
 }
 
 .members:nth-child(even) {
-  margin-top: 10rem;
+  margin-top: 4rem;
   background-color: pink;
 }
