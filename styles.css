@@ -189,12 +189,46 @@ figcaption {
 
 @media (min-width: 768px) {
   main {
-    background-color: pink;
+    /* background-color: pink; */
   }
 
   main {
     max-width: 90rem;
     margin: 0 auto;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 64%;
+    margin: 100px auto 30px;
+  }
+
+  .about h1 {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.98rem;
+    margin-top: 0px;
+    /* width: 80%; */
+  }
+
+  .about h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.69rem;
+    text-transform: uppercase;
+    margin-top: 0px;
+  }
+
+  .about p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.69rem;
+    margin-top: 12px;
+    /* width: 80%; */
   }
 
   .team {
@@ -205,7 +239,7 @@ figcaption {
   }
 
   .members {
-    max-width: 11.09rem;
+    max-width: 300px;
     position: relative;
   }
 
