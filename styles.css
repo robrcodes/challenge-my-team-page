@@ -106,3 +106,24 @@ color variables defined
   font-weight: 700;
   text-decoration: underline;
 }
+
+/* Mobile First ***************************************************/
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+img.portrait {
+  width: 80%;
+}
+
+.members:nth-child(even) {
+  margin-top: 10rem;
+  background-color: pink;
+}
