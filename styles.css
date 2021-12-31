@@ -193,7 +193,7 @@ figcaption {
     display: grid; /* 2 column layout */
     grid-template-columns: 1fr 1fr;
     max-width: 64%;
-    margin: 100px auto 30px;
+    margin: 100px auto 96px;
   }
 
   .about h1 {
