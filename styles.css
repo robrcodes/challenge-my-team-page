@@ -1,11 +1,10 @@
-/* Reset and Defaults */
+/* Browser Style Reset and Defaults */
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default margin */
 body,
 h1,
@@ -121,6 +120,7 @@ main {
 
 .members {
   max-width: 11.09rem;
+  position: relative;
 }
 
 img.portrait {
@@ -130,14 +130,59 @@ img.portrait {
 
 figcaption {
   font-family: "Poppins", serif;
+  font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.313rem;
   width: 78%;
   margin: 10px auto;
-  background-color: aqua;
+}
+
+.title {
+  font-family: "PT Serif", serif;
+  font-size: 0.625rem;
+  line-height: 0.828rem;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  position: absolute;
+  top: 0;
+  right: 0.3rem;
 }
 
 .members:nth-child(even) {
   margin-top: 4rem;
-  background-color: pink;
+}
+
+/* End Mobile First styles *******************************************/
+
+/* Start larger display size styles **********************************/
+
+@media (min-width: 768px) {
+  main {
+    background-color: pink;
+  }
+
+  main {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 64%;
+    margin: 0 auto;
+  }
+
+  .members {
+    max-width: 11.09rem;
+    position: relative;
+  }
+
+  .members:nth-child(even) {
+    margin-top: 0; /* reset 2nd column margin from mobile first */
+  }
+
+  .members:nth-child(3n-1) {
+    margin-top: 4rem; /* margin to position 2nd and 5th team cards */
+  }
 }
