@@ -18,38 +18,32 @@ dl,
 dd {
   margin: 0;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
   font-size: 100%;
 }
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -57,7 +51,6 @@ textarea,
 select {
   font: inherit;
 }
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -73,24 +66,104 @@ select {
   }
 }
 
-/* 
-color variables defined
-*/
+/* Custom Color variables defined */
 :root {
   --white: #ffffff;
+  --offwhite: #fafafa;
   --vlightgray: #bdbdbd;
-
-  --lightgray: #4f4f4f;
-  --darkgray: #333333;
+  --black: #000000;
 }
 
-/* font-family: 'Poppins', sans-serif;
+/* Mobile First ***************************************************/
 
-    font-family: 'PT Serif', serif; */
+body {
+  background-color: var(--offwhite);
+}
 
-/* Credit information at bottom */
+main {
+  max-width: 375px; /* as per figma design */
+  margin: 0 auto;
+}
+
+.about {
+  margin-left: 20px;
+  margin-right: 16px;
+  margin-bottom: 56px;
+}
+
+.about h1 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.98rem;
+  color: var(--black);
+  margin-top: 75px;
+}
+
+.about h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.69rem;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 32px;
+}
+
+.about p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  color: var(--black);
+  margin-top: 12px;
+}
+
+.team {
+  /* 2 column layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.members {
+  max-width: 178px;
+  position: relative;
+}
+
+img.portrait {
+  width: 78%;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  color: var(--black);
+  width: 78%;
+  margin: 10px auto;
+}
+
+.title {
+  font-family: "PT Serif", serif;
+  font-size: 0.625rem;
+  line-height: 0.828rem;
+  text-transform: uppercase;
+  writing-mode: vertical-lr; /* rotate text 90 degrees */
+  color: var(--black);
+  position: absolute;
+  top: 0;
+  right: 6px;
+}
+
+.members:nth-child(even) {
+  margin-top: 64px; /* moves 2nd, 4th & 6th cards down */
+}
+
+/* Credit and link information at bottom */
 .createdBy {
-  font-family: "Montserrat", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1.063rem;
   text-align: center;
@@ -106,99 +179,18 @@ color variables defined
   text-decoration: underline;
 }
 
-/* Mobile First ***************************************************/
-
-main {
-  max-width: 23.4rem;
-  margin: 0 auto;
-}
-
-.about {
-  margin-left: 1.22rem;
-  margin-right: 1rem;
-  margin-bottom: 3.5rem;
-}
-
-.about h1 {
-  font-family: "PT Serif", serif;
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 2.98rem;
-  margin-top: 75px;
-}
-
-.about h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.125rem;
-  line-height: 1.69rem;
-  text-transform: uppercase;
-  margin-top: 32px;
-}
-
-.about p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3rem;
-  margin-top: 12px;
-}
-
-.team {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.members {
-  max-width: 11.09rem;
-  position: relative;
-}
-
-img.portrait {
-  width: 78%;
-  margin: 0 auto;
-}
-
-figcaption {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.313rem;
-  width: 78%;
-  margin: 10px auto;
-}
-
-.title {
-  font-family: "PT Serif", serif;
-  font-size: 0.625rem;
-  line-height: 0.828rem;
-  text-transform: uppercase;
-  writing-mode: vertical-lr;
-  position: absolute;
-  top: 0;
-  right: 0.3rem;
-}
-
-.members:nth-child(even) {
-  margin-top: 4rem;
-}
-
 /* End Mobile First styles *******************************************/
 
 /* Start larger display size styles **********************************/
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   main {
-    /* background-color: pink; */
-  }
-
-  main {
-    max-width: 90rem;
+    max-width: 1440px; /* as per figma design */
     margin: 0 auto;
   }
 
   .about {
-    display: grid;
+    display: grid; /* 2 column layout */
     grid-template-columns: 1fr 1fr;
     max-width: 64%;
     margin: 100px auto 30px;
@@ -210,7 +202,6 @@ figcaption {
     font-size: 2.25rem;
     line-height: 2.98rem;
     margin-top: 0px;
-    /* width: 80%; */
   }
 
   .about h2 {
@@ -220,6 +211,7 @@ figcaption {
     line-height: 1.69rem;
     text-transform: uppercase;
     margin-top: 0px;
+    margin-left: 40px;
   }
 
   .about p {
@@ -228,11 +220,11 @@ figcaption {
     font-size: 1.125rem;
     line-height: 1.69rem;
     margin-top: 12px;
-    /* width: 80%; */
+    margin-left: 40px;
   }
 
   .team {
-    display: grid;
+    display: grid; /* 3 column layout for cards */
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 64%;
     margin: 0 auto;
@@ -240,14 +232,13 @@ figcaption {
 
   .members {
     max-width: 300px;
-    position: relative;
   }
 
   .members:nth-child(even) {
-    margin-top: 0; /* reset 2nd column margin from mobile first */
+    margin-top: 0; /* reset 2nd, 4th, & 6th cards from mobile first */
   }
 
   .members:nth-child(3n-1) {
-    margin-top: 4rem; /* margin to position 2nd and 5th team cards */
+    margin-top: 64px; /* moves down 2nd and 5th team cards */
   }
 }
